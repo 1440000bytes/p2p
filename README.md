@@ -37,7 +37,7 @@ Enter signed transaction:cHNidP8BAHECAAAAAQ9zUJaPPLEUwIVHd+WsfrHRYjhZpItNXcNUC/l
 
 ```
 
-Funding transaction: [`aad75b57f90b54c35d4d8ba4593862d1b17eace5774785c014b13c8f9650730f`](https://mempool.space/signet/tx/aad75b57f90b54c35d4d8ba4593862d1b17eace5774785c014b13c8f9650730f)
+Funding transaction: [`aad75b57f90b54c35d4d8ba4593862d1b17eace5774785c014b13c8f9650730f`](https://mempool.space/signet/tx/aad75b57f90b54c35d4d8ba4593862d1b17eace5774785c014b13c8f9650730f)  
 Release transaction: [`537c8381b2ff9428f2bcc02b897cdc8fe4da2c1aeca4491c02a41431d0f183f6`](https://mempool.space/signet/tx/537c8381b2ff9428f2bcc02b897cdc8fe4da2c1aeca4491c02a41431d0f183f6)
 
 
