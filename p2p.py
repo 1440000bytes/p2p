@@ -10,7 +10,7 @@ headers = {
 
 def getaddress():
 
-    payload = "{\"jsonrpc\": \"1.0\", \"id\": \"curltest\", \"method\": \"getnewaddress\"}"
+    payload = "{\"jsonrpc\": \"1.0\", \"id\": \"p2p\", \"method\": \"getnewaddress\"}"
     response = requests.request("POST", url, headers=headers, data=payload)
 
     return response.json()['result']
@@ -19,7 +19,7 @@ def getkey():
 
     address =  getaddress()
 
-    payload = "{\"jsonrpc\": \"1.0\", \"id\": \"curltest\", \"method\": \"getaddressinfo\", \"params\": [\"" + str(address)+ "\"]}"
+    payload = "{\"jsonrpc\": \"1.0\", \"id\": \"p2p\", \"method\": \"getaddressinfo\", \"params\": [\"" + str(address)+ "\"]}"
     response = requests.request("POST", url, headers=headers, data=payload)
 
     return response.json()['result']['pubkey']
@@ -34,7 +34,7 @@ def registerkeys():
 
 def createmultisig():
 
-    payload = "{\"jsonrpc\": \"1.0\",\r\n \"id\": \"curltest\",\r\n  \"method\": \"createmultisig\",\r\n  \"params\": [2, [\"" + alice_key + "\",\"" + bob_key + "\",\"" + carol_key + "\"]]\r\n}"
+    payload = "{\"jsonrpc\": \"1.0\",\r\n \"id\": \"p2p\",\r\n  \"method\": \"createmultisig\",\r\n  \"params\": [2, [\"" + alice_key + "\",\"" + bob_key + "\",\"" + carol_key + "\"]]\r\n}"
     response = requests.request("POST", url, headers=headers, data=payload)
 
     return response.json()['result']['address'], response.json()['result']['descriptor']
@@ -62,7 +62,7 @@ def createtx():
 
 def finalizetx():
 
-    payload = "{\"jsonrpc\": \"1.0\",\r\n \"id\": \"curltest\",\r\n  \"method\": \"finalizepsbt\",\r\n  \"params\": [\"" + str(signed_tx) + "\"]\r\n}"
+    payload = "{\"jsonrpc\": \"1.0\",\r\n \"id\": \"p2p\",\r\n  \"method\": \"finalizepsbt\",\r\n  \"params\": [\"" + str(signed_tx) + "\"]\r\n}"
     response = requests.request("POST", url, headers=headers, data=payload)
 
     final_tx = response.json()['result']['hex']
@@ -71,7 +71,7 @@ def finalizetx():
 
 def broadcast():
 
-    payload = "{\"jsonrpc\": \"1.0\",\r\n \"id\": \"curltest\",\r\n  \"method\": \"sendrawtransaction\",\r\n  \"params\": [\"" + str(final_tx) + "\"]\r\n}"
+    payload = "{\"jsonrpc\": \"1.0\",\r\n \"id\": \"p2p\",\r\n  \"method\": \"sendrawtransaction\",\r\n  \"params\": [\"" + str(final_tx) + "\"]\r\n}"
     response = requests.request("POST", url, headers=headers, data=payload)
 
     release_txid = response.json()['result']
