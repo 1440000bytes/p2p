@@ -14,7 +14,7 @@
  6. Bob will sign the transaction.
  7. Carol will finalize the signed transaction and broadcast it.
 
- _10% fee for the trade goes to Carol in release transaction, 0.00010000 BTC in the below transaction. Rest amount is sent to Bob._
+ :information_source: 10% fee for the trade goes to Carol in release transaction, 0.00010000 BTC in the below transaction. Rest amount is sent to Bob.
 
  An example trade using the python script (signet):
 
