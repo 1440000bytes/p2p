@@ -9,7 +9,7 @@
  1. Enter public keys for Alice and Bob
  2. It will create a 2 of 3 multisig address with the public keys (Alice, Bob and Carol)
  3. Alice will send BTC to multisig address because she is the seller in this trade.
- 4. Bob will enter the withdrwal address to receive bitcoin.
+ 4. Bob will enter the withdrawal address to receive bitcoin.
  5. Bob will send money to Alice's bank account. Alice will confirm it and sign the transaction.
  6. Bob will sign the transaction.
  7. Carol will finalize the signed transaction and broadcast it.
